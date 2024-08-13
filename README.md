@@ -1,6 +1,6 @@
 ## Getting Started
 
-It's a simple zero dependencies template string compiler for Typescript and typescript.
+It's a simple zero dependencies template string compiler for Javascript and Typescript.
 
 ## Basic Usage
 
