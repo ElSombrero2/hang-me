@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "downlevelIteration": true,
+    "esModuleInterop": true
+  },
+  "include": ["index.ts", "src/**/*"],
+  "exclude": ["dist", "node_modules", "src/**/*.spec.ts"]
+}
