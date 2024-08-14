@@ -1,16 +1,26 @@
 {
   "name": "hang-me",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple zero dependencies Javascript tool that compile string template",
+  "main": "lib/index.js",
   "scripts": {
     "test": "npx jest",
     "test:cov": "npx jest --coverage",
     "dev": "npx ts-node index.ts",
     "build": "npx tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "template",
+    "string",
+    "handlebars",
+    "lightweight",
+    "zero-dependencies",
+    "interpolation",
+    "fast",
+    "compiler",
+    "string-template"
+  ],
+  "author": "elsombrero",
   "license": "ISC",
   "dependencies": {
     "hang-me": "file:"
