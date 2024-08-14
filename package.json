@@ -1,6 +1,6 @@
 {
   "name": "hang-me",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple zero dependencies Javascript tool that compile string template",
   "main": "lib/index.js",
   "scripts": {

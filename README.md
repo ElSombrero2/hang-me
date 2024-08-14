@@ -5,7 +5,7 @@ It's a simple zero dependencies template string compiler for Javascript and Type
 ## Basic Usage
 
 ```typescript
-import { Compiler } from "./compiler/compiler";
+import { Compiler } from "hang-me";
 
 const template = "My name is: {{name}}!";
 const compiler = new Compiler();
@@ -22,6 +22,7 @@ console.log(result); // my name is: John Doe!
 You can get values directly from embed object
 
 ```typescript
+import { Compiler } from "hang-me";
 
 const template = "Hello, I am {{user.firstname}}  {{user.lastname}}!";
 const compiler = new Compiler();
@@ -39,7 +40,7 @@ console.log(result); // Hello, I am John Doe!
 Or you can get value from array
 
 ```typescript
-import { Compiler } from "./compiler/compiler";
+import { Compiler } from "hang-me";
 
 const template = "Hello, I am {{user.info[0]}}  {{user.info[1]}}!";
 const compiler = new Compiler();
@@ -61,7 +62,7 @@ console.log(result); // Hello, I am John Doe!
 You can also call a function inside your template by using this syntax
 
 ```typescript
-import { Compiler } from "./compiler/compiler";
+import { Compiler } from "hang-me";
 
 const template = "Hello, I am {{fullnameUpperCase: firstname lastname}}!";
 const compiler = new Compiler();
@@ -75,6 +76,22 @@ const result = compiler.compile(template, {
 });
 
 console.log(result); // Hello, I am JOHN DOE!
+```
+## Javascript
+
+You can also use require
+
+```Javascript
+const { Compiler } = require("hang-me");
+
+const template = "My name is: {{name}}!";
+const compiler = new Compiler();
+
+const result = compiler.compile(template, {
+  name: 'John Doe'
+});
+
+console.log(result); // my name is: John Doe!
 ```
 
 ### Enjoy 🫡
