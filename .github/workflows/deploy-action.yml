@@ -5,7 +5,13 @@ on:
     branches:
       - env/prod
 jobs:
-
+  test:
+    runs-on: ubuntu-lastest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm i
+      - run: npm run test:cov
   build:
     runs-on: ubuntu-latest
     permissions:
@@ -18,7 +24,6 @@ jobs:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm i
-      - run: npm run test:cov
       - run: npm run build
       - run: npm publish --provenance --access public
         env:
