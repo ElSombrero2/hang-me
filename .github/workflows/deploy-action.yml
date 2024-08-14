@@ -13,6 +13,7 @@ jobs:
       - run: npm i
       - run: npm run test:cov
   build:
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read
